@@ -165,15 +165,16 @@ all_scoreCor = function(scoreList,gse_data_id,out_path){
   
   count = 0
   corVal = NULL
-  for(i in 1:2){
-    for(j in (i+1):3){
+  for(i in 1:1){
+    for(j in (i+1):2){
       count = count + 1
       corEst = cor.test(scoreList[[i]],scoreList[[j]])
       corVal = c(corVal,c(corEst$estimate,corEst$p.value))
     }
   }
   
-  names(corVal) = c("76GS-KS_Cor","76GS-KS_Pval","76GS-MLR_Cor","76GS-MLR_Pval","KS-MLR_Cor","KS-MLR_Pval" )
+  # names(corVal) = c("76GS-KS_Cor","76GS-KS_Pval","76GS-MLR_Cor","76GS-MLR_Pval","KS-MLR_Cor","KS-MLR_Pval" )
+  names(corVal) = c("76GS-KS_Cor","76GS-KS_Pval")
 
   outFileName =paste("../","76GS_KS_EMT_Cor_all.txt",sep = '/')
   if(!file.exists(outFileName)) file.create(outFileName)
@@ -191,8 +192,9 @@ getEMTScore = function(expVal,gseNum,gplID,dirIn){
   setwd(dirOut)
   score1 = EMT76GS(expVal,gseNum,dirOut)
   score2 = KSScore(expVal,gseNum,dirOut)
-  score3 = mlrEMTPred(expVal,gseNum,gplID,dirIn,dirOut)
-  score_list = list(as.vector(score1), as.vector(score2[,1]), as.vector(score3))
+  # score3 = mlrEMTPred(expVal,gseNum,gplID,dirIn,dirOut)
+  # score_list = list(as.vector(score1), as.vector(score2[,1]), as.vector(score3))
+  score_list = list(as.vector(score1), as.vector(score2[,1]))
   cor_val = all_scoreCor(score_list,gseNum,dirOut)
   
   return(score_list)
