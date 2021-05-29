@@ -135,7 +135,7 @@ getGeneWiseExp = function(inputDir,gseMat,annotMat,otherAnnot,annotID,sampleName
 	gseMatNum[is.null(gseMatNum)]  = 0
 
 	## Log2 transformation
-	if(na.omit(any(gseMatNum >= 100))) {
+	if(length(na.omit(any(gseMatNum >= 100))) > 0 ) {
 		cat("log2 transformation---\n") 
 		gseMatNum = log2(gseMatNum + 1)
 	}

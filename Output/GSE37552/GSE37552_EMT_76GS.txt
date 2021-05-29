@@ -1,0 +1,5 @@
+	EMTScoreStd
+Human_Osteosarcoma_Non_Metastatic_SaOS_2_Parental_Line	-6.91158329470698
+Human_Osteosarcoma__Metastatic_LM7_Subline_of_SaOS_2	-8.26910546645339
+Human_Osteosarcoma_Non_Metastatic_HOS_Parental_Line	-2.15606940338777
+Human_Osteosarcoma__Metastatic_143B_Subline_of_HOS	17.3367581645481

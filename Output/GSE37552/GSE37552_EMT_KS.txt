@@ -1,0 +1,5 @@
+V1	V2
+Human_Osteosarcoma_Non_Metastatic_SaOS_2_Parental_Line	0.695254431103488
+Human_Osteosarcoma__Metastatic_LM7_Subline_of_SaOS_2	0.61978273299028
+Human_Osteosarcoma_Non_Metastatic_HOS_Parental_Line	0.72527158376215
+Human_Osteosarcoma__Metastatic_143B_Subline_of_HOS	0.642510005717553

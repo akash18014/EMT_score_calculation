@@ -63,3 +63,4 @@ GPL7504	ID	Gene Symbol
 GPL5049	ID	Gene_Symbol
 GPL23126	ID	gene_assignment
 GPL19137	ID	Gene_symbol
+GPL9692	ID	GeneSymbol
